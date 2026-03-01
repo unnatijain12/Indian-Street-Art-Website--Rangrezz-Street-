@@ -1,0 +1,250 @@
+/* ===============================
+   GLOBAL STYLES
+================================= */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #0A0A0A;
+    color: #F5F5F5;
+    font-family: 'Inter', sans-serif;
+}
+
+h1, h2, h3 {
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 2px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Navigation (applies to all pages) */
+nav {
+    background-color: #1A1A1A;
+    padding: 15px 0;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #F5F5F5;
+    font-family: 'Oswald', sans-serif;
+    font-size: 14px;
+}
+
+nav ul li a:hover {
+    color: #FF007F;
+}
+
+/* Buttons */
+.btn-primary,
+.btn-secondary {
+    font-family: 'Oswald', sans-serif;
+    padding: 12px 30px;
+    text-decoration: none;
+    display: inline-block;
+    margin: 10px;
+    transition: 0.3s ease;
+}
+
+.btn-primary {
+    background-color: #FF007F;
+    color: #0A0A0A;
+}
+
+.btn-primary:hover {
+    background-color: #00F5FF;
+    color: #0A0A0A;
+}
+
+.btn-secondary {
+    border: 2px solid #00F5FF;
+    color: #00F5FF;
+}
+
+.btn-secondary:hover {
+    background-color: #00F5FF;
+    color: #0A0A0A;
+}
+
+/* Sections */
+.section {
+    padding: 60px 12%;
+}
+
+.section h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 38px;
+    color: #FFAC1C;
+    margin-bottom: 25px;
+}
+
+.section p {
+    line-height: 1.8;
+    margin-bottom: 18px;
+}
+
+/* Page Banner / Intro */
+.page-banner {
+    background-color: #1A1A1A;
+    padding: 60px 10%;
+    text-align: center;
+    border-bottom: 2px solid #FF007F;
+}
+
+.page-banner h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 60px;
+    color: #FF007F;
+    margin: 0;
+}
+
+.breadcrumb {
+    font-family: 'Oswald', sans-serif;
+    color: #00F5FF;
+    font-size: 14px;
+}
+
+.intro {
+    padding: 60px 12%;
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+
+/* Forms */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-family: 'Oswald', sans-serif;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    color: #00F5FF;
+}
+
+input, select, textarea {
+    padding: 12px;
+    background: #1A1A1A;
+    border: 1px solid #333;
+    color: #F5F5F5;
+    font-family: 'Inter', sans-serif;
+}
+
+textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border: 1px solid #FF007F;
+}
+
+.submit-btn {
+    margin-top: 30px;
+    padding: 15px;
+    background: #FF007F;
+    border: none;
+    color: white;
+    font-family: 'Oswald', sans-serif;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.submit-btn:hover {
+    background: #00F5FF;
+    color: #000;
+}
+
+
+/* Utility Classes */
+.text-center {
+    text-align: center;
+}
+
+.mt-20 {
+    margin-top: 20px;
+}
+
+.mb-20 {
+    margin-bottom: 20px;
+}
+
+/* FOOTER — COMPACT */
+.site-footer {
+    background: #111;
+    color: #ccc;
+    padding: 25px 20px 15px; /* reduced padding */
+    font-family: 'Inter', sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 20px; /* smaller gap */
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 180px;
+}
+
+.footer-section h3 {
+    font-family: 'Oswald', sans-serif;
+    color: #FF007F;
+    margin-bottom: 8px; /* less space */
+    font-size: 16px;
+}
+
+.footer-section a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 13px;
+    display: block;
+    margin-bottom: 4px; /* tighter spacing */
+    transition: 0.3s;
+}
+
+.footer-section a:hover {
+    color: #00F5FF;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 15px; /* smaller gap */
+    border-top: 1px solid rgba(255,255,255,0.2);
+    padding-top: 8px; /* reduced padding */
+    font-size: 12px;
+    color: #aaa;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .footer-section {
+        margin-bottom: 10px;
+    }
+}
