@@ -3,26 +3,39 @@ const numbers = document.querySelectorAll('.number');
 let counted = false;
 
 function countUp() {
-    if (!counted && window.scrollY + window.innerHeight > document.querySelector('.coverage').offsetTop) {
-        numbers.forEach(number => {
-            const target = +number.getAttribute('data-target');
+    const section = document.querySelector('.coverage');
+    if (!section) return;
+
+    const trigger = section.getBoundingClientRect().top;
+
+    if (!counted && trigger < window.innerHeight - 100) {
+
+        numbers.forEach(num => {
+            const target = +num.dataset.target;
             let count = 0;
-            const step = Math.ceil(target / 100);
+
+            const speed = 40; // HIGHER = SLOWER
+
             const interval = setInterval(() => {
-                count += step;
-                if(count >= target){
-                    number.innerText = target + (target>1?'+':'');
+
+                count += Math.ceil(target / speed);
+
+                if (count >= target) {
+                    num.innerText = target + "+";
                     clearInterval(interval);
                 } else {
-                    number.innerText = count + (target>1?'+':'');
+                    num.innerText = count + "+";
                 }
-            }, 20);
+
+            }, 40); // interval timing (increase for slower)
         });
+
         counted = true;
     }
 }
 
-window.addEventListener('scroll', countUp);
+window.addEventListener("scroll", countUp);
+window.addEventListener("load", countUp);
 // CITIES TABS
 // ===============================
 
