@@ -9,7 +9,7 @@ body {
     font-family: 'Inter', sans-serif;
 }
 
-/* Images responsive */
+/* FIX: images responsive */
 img {
     max-width: 100%;
     height: auto;
@@ -37,7 +37,7 @@ nav {
 nav ul {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /* FIX for responsiveness */
     list-style: none;
     margin: 0;
     padding: 0;
@@ -140,34 +140,6 @@ nav ul li a:hover {
 }
 
 /* ===============================
-   FLEX LAYOUTS (ALL PAGES)
-================================= */
-.cards,
-.artist-container,
-.events-container,
-.mission-cards,
-.info-cards,
-.styles-grid,
-.cities-grid,
-.themes-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-}
-
-/* Cards */
-.card,
-.artist-card,
-.event-card,
-.style-card,
-.theme-card,
-.info-card {
-    flex: 1 1 280px;
-    max-width: 350px;
-}
-
-/* ===============================
    FORMS
 ================================= */
 form {
@@ -257,22 +229,35 @@ input:focus, select:focus, textarea:focus {
 }
 
 /* ===============================
-   RESPONSIVE (SIMPLE & CLEAN)
+   RESPONSIVE
 ================================= */
 @media (max-width: 768px) {
+
+    .section {
+        padding: 40px 20px;
+    }
+
+    .page-banner h1 {
+        font-size: 36px;
+    }
+
     /* NAVBAR STACK */
+
     nav {
         padding: 10px;
     }
+
     nav ul {
         flex-direction: row; /* NOT column */
         flex-wrap: wrap;
         justify-content: center;
         gap: 8px;
     }
+
     nav ul li {
         margin: 0;
     }
+
     nav ul li a {
         display: block;
         padding: 6px 12px;
@@ -282,52 +267,13 @@ input:focus, select:focus, textarea:focus {
         background: #111;
         transition: 0.3s;
     }
+
     nav ul li a:hover {
         background: #FF007F;
         color: #000;
     }
-}
-
-    /* TEXT */
-    .page-banner h1 {
-        font-size: 32px;
-    }
-
-    .section h2 {
-        font-size: 26px;
-    }
-
-    .intro {
-        font-size: 16px;
-        padding: 30px 15px;
-    }
-
-    /* SECTIONS */
-    .section {
-        padding: 40px 15px;
-    }
-    /* CARDS FULL WIDTH */
-    .card,
-    .artist-card,
-    .event-card,
-    .style-card,
-    .theme-card,
-    .info-card {
-        max-width: 100%;
-    }
-
-    /* STACK LAYOUTS */
-    .cards,
-    .artist-container,
-    .events-container,
-    .mission-cards,
-    .info-cards {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    /* FOOTER */
     .footer-container {
         flex-direction: column;
         text-align: center;
     }
+}
