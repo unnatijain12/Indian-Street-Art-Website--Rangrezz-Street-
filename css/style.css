@@ -273,7 +273,6 @@ input:focus, select:focus, textarea:focus {
     nav ul li {
         margin: 0;
     }
-
     nav ul li a {
         display: block;
         padding: 6px 12px;
@@ -283,7 +282,6 @@ input:focus, select:focus, textarea:focus {
         background: #111;
         transition: 0.3s;
     }
-
     nav ul li a:hover {
         background: #FF007F;
         color: #000;
