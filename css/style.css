@@ -9,7 +9,7 @@ body {
     font-family: 'Inter', sans-serif;
 }
 
-/* Images responsive everywhere */
+/* Images responsive */
 img {
     max-width: 100%;
     height: auto;
@@ -140,7 +140,7 @@ nav ul li a:hover {
 }
 
 /* ===============================
-   FLEX LAYOUTS (ALL PAGES FIX)
+   FLEX LAYOUTS (ALL PAGES)
 ================================= */
 .cards,
 .artist-container,
@@ -156,7 +156,7 @@ nav ul li a:hover {
     justify-content: center;
 }
 
-/* Card responsiveness */
+/* Cards */
 .card,
 .artist-card,
 .event-card,
@@ -165,11 +165,6 @@ nav ul li a:hover {
 .info-card {
     flex: 1 1 280px;
     max-width: 350px;
-}
-
-/* Center buttons */
-.section-button {
-    text-align: center;
 }
 
 /* ===============================
@@ -262,77 +257,63 @@ input:focus, select:focus, textarea:focus {
 }
 
 /* ===============================
-   TABLET (≤1024px)
-================================= */
-@media (max-width: 1024px) {
-
-    .section {
-        padding: 50px 8%;
-    }
-
-    .page-banner h1 {
-        font-size: 45px;
-    }
-}
-
-/* ===============================
-   MOBILE (≤768px)
+   RESPONSIVE (SIMPLE & CLEAN)
 ================================= */
 @media (max-width: 768px) {
 
+    /* NAVBAR STACK */
     nav ul {
         flex-direction: column;
         align-items: center;
+        gap: 10px;
     }
 
     nav ul li {
-        margin: 10px 0;
+        margin: 5px 0;
     }
 
-    .section {
-        padding: 40px 20px;
-    }
-
-    .section h2 {
-        font-size: 28px;
-    }
-
+    /* TEXT */
     .page-banner h1 {
         font-size: 32px;
     }
 
-    .intro {
-        font-size: 16px;
-    }
-
-    .card,
-    .artist-card,
-    .event-card {
-        max-width: 100%;
-    }
-
-    .footer-container {
-        flex-direction: column;
-        text-align: center;
-    }
-}
-
-/* ===============================
-   SMALL MOBILE (≤480px)
-================================= */
-@media (max-width: 480px) {
-
-    .section {
-        padding: 30px 15px;
-    }
-
-    .page-banner h1 {
+    .section h2 {
         font-size: 26px;
     }
 
-    .btn-primary,
-    .btn-secondary {
-        padding: 10px 20px;
-        font-size: 14px;
+    .intro {
+        font-size: 16px;
+        padding: 30px 15px;
+    }
+
+    /* SECTIONS */
+    .section {
+        padding: 40px 15px;
+    }
+
+    /* CARDS FULL WIDTH */
+    .card,
+    .artist-card,
+    .event-card,
+    .style-card,
+    .theme-card,
+    .info-card {
+        max-width: 100%;
+    }
+
+    /* STACK LAYOUTS */
+    .cards,
+    .artist-container,
+    .events-container,
+    .mission-cards,
+    .info-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* FOOTER */
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
     }
 }
