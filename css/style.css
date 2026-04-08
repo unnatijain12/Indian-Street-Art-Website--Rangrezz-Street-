@@ -260,20 +260,16 @@ input:focus, select:focus, textarea:focus {
    RESPONSIVE (SIMPLE & CLEAN)
 ================================= */
 @media (max-width: 768px) {
-
     /* NAVBAR STACK */
-
     nav {
         padding: 10px;
     }
-
     nav ul {
         flex-direction: row; /* NOT column */
         flex-wrap: wrap;
         justify-content: center;
         gap: 8px;
     }
-
     nav ul li {
         margin: 0;
     }
@@ -312,7 +308,6 @@ input:focus, select:focus, textarea:focus {
     .section {
         padding: 40px 15px;
     }
-
     /* CARDS FULL WIDTH */
     .card,
     .artist-card,
