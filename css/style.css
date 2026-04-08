@@ -9,7 +9,7 @@ body {
     font-family: 'Inter', sans-serif;
 }
 
-/* FIX: images responsive */
+/* Images responsive everywhere */
 img {
     max-width: 100%;
     height: auto;
@@ -37,7 +37,7 @@ nav {
 nav ul {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap; /* FIX for responsiveness */
+    flex-wrap: wrap;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -140,6 +140,39 @@ nav ul li a:hover {
 }
 
 /* ===============================
+   FLEX LAYOUTS (ALL PAGES FIX)
+================================= */
+.cards,
+.artist-container,
+.events-container,
+.mission-cards,
+.info-cards,
+.styles-grid,
+.cities-grid,
+.themes-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Card responsiveness */
+.card,
+.artist-card,
+.event-card,
+.style-card,
+.theme-card,
+.info-card {
+    flex: 1 1 280px;
+    max-width: 350px;
+}
+
+/* Center buttons */
+.section-button {
+    text-align: center;
+}
+
+/* ===============================
    FORMS
 ================================= */
 form {
@@ -229,24 +262,77 @@ input:focus, select:focus, textarea:focus {
 }
 
 /* ===============================
-   RESPONSIVE
+   TABLET (≤1024px)
+================================= */
+@media (max-width: 1024px) {
+
+    .section {
+        padding: 50px 8%;
+    }
+
+    .page-banner h1 {
+        font-size: 45px;
+    }
+}
+
+/* ===============================
+   MOBILE (≤768px)
 ================================= */
 @media (max-width: 768px) {
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
 
     .section {
         padding: 40px 20px;
     }
 
-    .page-banner h1 {
-        font-size: 36px;
+    .section h2 {
+        font-size: 28px;
     }
 
-    nav ul {
-        flex-direction: column;
+    .page-banner h1 {
+        font-size: 32px;
+    }
+
+    .intro {
+        font-size: 16px;
+    }
+
+    .card,
+    .artist-card,
+    .event-card {
+        max-width: 100%;
     }
 
     .footer-container {
         flex-direction: column;
         text-align: center;
+    }
+}
+
+/* ===============================
+   SMALL MOBILE (≤480px)
+================================= */
+@media (max-width: 480px) {
+
+    .section {
+        padding: 30px 15px;
+    }
+
+    .page-banner h1 {
+        font-size: 26px;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        padding: 10px 20px;
+        font-size: 14px;
     }
 }
